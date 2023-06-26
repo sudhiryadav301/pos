@@ -24,7 +24,7 @@
             <htmlpath>report/Spark.html</htmlpath>
            	<appurl>https://sudhir.aksharatraining.in/pos/public</appurl>
            	<grid>no</grid>
-           	<pptfile>prod.properties</pptfile>
+           	<pptfile>qa.properties</pptfile>
           </systemPropertyVariables>
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>

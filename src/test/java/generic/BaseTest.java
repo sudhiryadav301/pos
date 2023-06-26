@@ -30,7 +30,7 @@ import org.openqa.selenium.support.events.EventFiringDecorator;
 
 @Listeners(TestListener.class)
 public class BaseTest {
-	public static final String DEFAULT_URL="https://demo.actitime.com";
+	public static final String DEFAULT_URL="https://sudhir.aksharatraining.in/pos/public";
 	public static final String DEFAULT_GRID="no";
 	public static final String DEFAULT_PPTFILE="qa.properties";
 	public static final String DEFAULT_HTMLPATH="report/Spark.html";
