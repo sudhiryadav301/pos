@@ -1,0 +1,11 @@
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  <parameter name="htmlpath" value="${htmlpath}"/>
+  <parameter name="appurl" value="${appurl}"/>
+  <parameter name="grid" value="${grid}"/>
+  <parameter name="pptfile" value="${pptfile}"/>
+    <packages>
+      <package name="pos.scripts"/>
+    </packages>
+  </test>
+</suite>
