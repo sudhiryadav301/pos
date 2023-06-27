@@ -17,7 +17,7 @@ public class ValidLogin extends BaseTest {
 		 
 		
 		
-		LoginPage loginPage=new LoginPage(driver);
+		   LoginPage loginPage=new LoginPage(driver);
 			loginPage.setUserName("admin");
 	
 			loginPage.setPassword("pointofsale");
