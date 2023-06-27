@@ -27,7 +27,6 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 
-
 @Listeners(TestListener.class)
 public class BaseTest {
 	public static final String DEFAULT_URL="https://sudhir.aksharatraining.in/pos/public";
@@ -43,7 +42,7 @@ public class BaseTest {
 	public WebDriverWait wait;
 
 	@Parameters({"htmlpath"})
-	@BeforeSuite
+	@BeforeSuite(alwaysRun = true)
 	public void intReport(@Optional(DEFAULT_HTMLPATH)  String htmlPath)
 	{
 		report=new ExtentReports();	
@@ -51,14 +50,14 @@ public class BaseTest {
 		report.attachReporter(spark);
 	}
 	
-	@AfterSuite
+	@AfterSuite(alwaysRun = true)
 	public void generateReport()
 	{
 		report.flush();
 	}
 	
 	@Parameters({"appurl","grid","pptfile"})
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void preCondition(@Optional(DEFAULT_URL) String appURL,@Optional(DEFAULT_GRID) String grid,@Optional(DEFAULT_PPTFILE) String pptFile,Method method) throws Exception {
 		String testName=method.getName();
 		extentTest = report.createTest(testName);
@@ -118,7 +117,7 @@ public class BaseTest {
 		driver = decorator.decorate(original_driver);
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void postCondition(ITestResult result) {
 		
 		List<String> output = Reporter.getOutput(result);

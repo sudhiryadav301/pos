@@ -10,9 +10,9 @@ import generic.Retry;
 import pos.pages.HomePage;
 import pos.pages.LoginPage;
 
-public class DemoTest extends BaseTest {
+public class ValidLogin extends BaseTest {
 
-	@Test(enabled=false) 
+	@Test 
 	public void testPosValidLogin() throws InterruptedException {
 		 
 		
